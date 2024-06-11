@@ -52,5 +52,7 @@ export class Tab1Page implements AfterViewInit {
         zoom: 8, // The initial zoom level to be rendered by the map
       },
     });
+
+    await this.map.enableCurrentLocation(true);
   }
 }
