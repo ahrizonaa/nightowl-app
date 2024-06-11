@@ -15,6 +15,12 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
 
 import { GoogleMap } from '@capacitor/google-maps';
 
+import { CreateMapArgs } from '@capacitor/google-maps/dist/typings/implementation';
+
+import { GoogleMapConfig } from '@capacitor/google-maps/dist/typings/definitions';
+
+type MapOtions = google.maps.MapOptions;
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -39,7 +45,7 @@ export class Tab1Page implements AfterViewInit {
   }
 
   async initGoogleMap() {
-    this.map = await GoogleMap.create({
+    let mapOptions: CreateMapArgs = {
       id: 'my-map', // Unique identifier for this map instance
       element: this.mapRef.nativeElement, // reference to the capacitor-google-map element
       apiKey: 'AIzaSyCTam9OUKjjJwwHSXjvOLuBBWPb-bWZass', // Your Google Maps API Key
@@ -51,7 +57,9 @@ export class Tab1Page implements AfterViewInit {
         },
         zoom: 8, // The initial zoom level to be rendered by the map
       },
-    });
+    };
+
+    this.map = await GoogleMap.create(mapOptions);
 
     await this.map.enableCurrentLocation(true);
   }
