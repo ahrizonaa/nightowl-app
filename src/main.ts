@@ -1,4 +1,5 @@
-import { enableProdMode } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import {
   RouteReuseStrategy,
@@ -26,5 +27,6 @@ bootstrapApplication(AppComponent, {
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
     { provide: ENV_CONFIG, useValue: environment },
+    importProvidersFrom(HttpClientModule)
   ],
 });

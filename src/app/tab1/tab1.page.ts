@@ -11,7 +11,6 @@ import {
   IonTitle,
   IonContent,
 } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 import { GoogleMap } from '@capacitor/google-maps';
 
@@ -32,7 +31,6 @@ type MapOtions = google.maps.MapOptions;
     IonToolbar,
     IonTitle,
     IonContent,
-    ExploreContainerComponent,
   ],
 })
 export class Tab1Page implements AfterViewInit {

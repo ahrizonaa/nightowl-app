@@ -1,0 +1,8 @@
+<ion-content>
+  <ngx-ionic-social-login
+    [googleClientKey]="googleClientKey"
+    [facebookClientKey]="facebookClientKey"
+    (googleUser)="googleUserReceived($event)"
+    (facebookUser)="facebookUserReceived($event)"
+  ></ngx-ionic-social-login>
+</ion-content>
