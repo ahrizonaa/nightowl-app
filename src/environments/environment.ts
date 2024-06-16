@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8082',
+  apiUrl: 'http://localhost:8080',
   googleClientKey: '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',
   facebookClientKey: '421946357352421',
 };
