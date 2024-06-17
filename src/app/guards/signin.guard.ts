@@ -1,6 +1,6 @@
 import { CanActivateFn, Router } from '@angular/router';
 import { inject } from '@angular/core';
-import { AccountService } from 'boundless-apps-common';
+import { AccountService } from '@ahrizona/common';
 
 export const signinGuard: CanActivateFn = (route, state) => {
   const accountService = inject(AccountService);

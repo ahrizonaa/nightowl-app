@@ -8,8 +8,8 @@ import {
 
 import { AngularIonicSocialLogin } from 'angular-ionic-social-login';
 
-import { AccountService } from 'boundless-apps-common';
-import { ProviderUser } from 'boundless-apps-common/lib/interfaces/IAccountService';
+import { AccountService } from '@ahrizona/common';
+import { ProviderUser } from '@ahrizona/common/lib/interfaces/IAccountService';
 
 @Component({
   selector: 'app-tab2',

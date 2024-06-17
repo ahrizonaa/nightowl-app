@@ -15,7 +15,7 @@ import {
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
-import { ENV_CONFIG } from 'boundless-apps-common';
+import { ENV_CONFIG } from '@ahrizona/common';
 
 if (environment.production) {
   enableProdMode();
