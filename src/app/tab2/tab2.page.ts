@@ -26,7 +26,6 @@ import { ProviderUser } from '@ahrizona/common/lib/interfaces/IAccountService';
 })
 export class Tab2Page {
   constructor(private account: AccountService) {
-    console.log(this.account);
   }
 
   googleUserReceived(user: ProviderUser) {
